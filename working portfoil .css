@@ -1,0 +1,406 @@
+/* 🌗 THEME VARIABLES */
+:root {
+  --bg: #f9f9f9;
+  --text: #222;
+  --card-bg: #ffffff;
+  --btn-bg: #007aff;
+  --btn-text: #ffffff;
+  --link: #007aff;
+  --link-hover: #ff9800;
+}
+
+body.dark {
+  --bg: #121212;
+  --text: #f5f5f5;
+  --card-bg: #1e1e1e;
+  --btn-bg: #ff9800;
+  --btn-text: #000;
+  --link: #90caf9;
+  --link-hover: #ffb300;
+}
+
+/* 🌍 GLOBAL */
+* {
+  transition: background 0.4s ease, color 0.4s ease, transform 0.4s ease, opacity 0.4s ease;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+/* 🔝 NAVBAR */
+.navbar {
+  background: var(--card-bg);
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar h2 {
+  color: var(--text);
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--link);
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: var(--link-hover);
+}
+
+/* 🌗 THEME TOGGLE BUTTON */
+.theme-btn {
+  border: none;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+}
+/* ✅ Mobile Responsive Navbar with Toggle */
+
+/* Hide toggle on desktop */
+.menu-toggle {
+  display: none;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  border: none;
+  font-size: 1.8rem;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.menu-toggle:hover {
+  background: var(--link-hover);
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-top: 10px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    display: none;
+    text-align: center;
+    background: var(--card-bg);
+    border-radius: 8px;
+    margin-top: 10px;
+    padding: 10px 0;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 8px 0;
+    width: 100%;
+  }
+
+  .cj {
+    width: 60px;
+    height: 60px;
+  }
+
+  .navbar h2 {
+    font-size: 1.4rem;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .btn {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+}
+
+
+/* 🦸 HERO SECTION */
+/* 🎯 HERO SECTION */
+
+/* 💙 HERO SECTION */
+/* 💙 HERO SECTION */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background-color: #007aff; /* Solid blue background */
+  color: white;
+  animation: fadeIn 1.2s ease-in-out;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.hero h1 span {
+  color: #ffcc00; /* gold highlight for your name */
+}
+/* Logo size only */
+.cj {
+  width: 60px;      /* perfect logo width */
+  height: 60px;     /* equal height for circle */
+  border-radius: 50%; /* keeps it circular */
+  object-fit: cover;  /* prevents stretching */
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #e0e0e0;
+  margin-bottom: 25px;
+}
+
+.hero .btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #ffffff;
+  color: #007aff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero .btn:hover {
+  background: #0056d6;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+/* GENERAL BUTTONS (excluding hero section) */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: var(--btn-bg); /* blue in light mode, orange in dark mode */
+  color: var(--btn-text);    /* white in light, black in dark */
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for general buttons */
+.btn:hover {
+  background: rgb(8, 44, 73); /* violet hover */
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+
+
+
+/* 📄 SECTIONS */
+.section {
+  padding: 70px 20px;
+  text-align: center;
+  background: ;
+  color: var(--text);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* ✨ Scroll animation setup */
+.section {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 🧠 SKILLS */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.skill-badge {
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+/* 💼 PROJECTS */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* 💬 CONTACT SECTION */
+#contact {
+  background: var(--card-bg);
+  padding: 80px 20px;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 40px auto;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Contact heading */
+#contact h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: var(--text);
+}
+
+/* Form layout */
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Input & textarea styling */
+#contact-form input,
+#contact-form textarea {
+  padding: 14px 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: var(--card-bg);
+  color: var(--text);
+  font-size: 16px;
+  transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+  border-color: #007aff;
+  outline: none;
+}
+
+/* Placeholder color */
+#contact-form input::placeholder,
+#contact-form textarea::placeholder {
+  color: #888;
+}
+
+/* Send button */
+#contact-form button {
+  padding: 14px 20px;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#contact-form button:hover {
+  background:  rgb(8, 44, 73); /* hover effect */
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  #contact {
+    padding: 60px 15px;
+  }
+
+  #contact h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* 🦶 FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: var(--card-bg);
+  color: var(--text);
+}
+
+/* 🎞️ ANIMATIONS */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 480px) {
+  .navbar { flex-direction: column; gap: 10px; }
+  .hero h1 { font-size: 2rem; }
+}
